@@ -11,14 +11,14 @@ pipeline{
             sh "terraform init"
         }
        }
-
+        // plan
        stage('plan'){
         steps{
             sh "terraform plan -out=plan.out'"
         }
 
        }
-       
+
 
 
     }
