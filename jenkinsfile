@@ -1,0 +1,25 @@
+pipeline{
+
+    agent any 
+
+    stages{
+
+       
+       stage('Terraform init'){
+        steps{
+            sh "rm -rf .terraform"
+            sh "terraform init"
+        }
+       }
+
+       stage('plan'){
+        steps{
+            sh "terraform plan -out=plan.out'"
+        }
+
+       }
+       
+
+
+    }
+}
