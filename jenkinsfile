@@ -19,6 +19,15 @@ pipeline{
 
        }
 
+       stage('Apply'){
+        steps{
+             input 'Apply Terraform Plan?'
+             script{
+                sh 'terraform apply plan.out'
+             }
+        }
+       }
+
 
 
     }
