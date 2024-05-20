@@ -18,7 +18,7 @@ pipeline{
         }
 
        }
-
+    /*
        stage('Apply'){
         steps{
              input 'Apply Terraform Plan?'
@@ -27,6 +27,9 @@ pipeline{
              }
         }
        }
+    */
+
+       
     
        stage('Destroy'){
         steps{
